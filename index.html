@@ -345,16 +345,15 @@
             font-weight: 600;
         }
 
-        /* ===== SEÇÃO FÍSICA (AMPLIADA E COM IMAGEM BEM VISÍVEL) ===== */
+        /* ===== SEÇÃO FÍSICA (COM IMAGEM DE FUNDO NO BANNER E QUADRADOS LIMPOS) ===== */
         .fisica-banner-container {
             display: flex;
-            background: linear-gradient(rgba(20, 45, 30, 0.45), rgba(20, 45, 30, 0.55)), url('FISICAPI.jpg');
+            background: linear-gradient(rgba(20, 45, 30, 0.78), rgba(20, 45, 30, 0.78)), url('FISICAPI.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 32px;
-            padding: 80px 50px; /* Aumentado de 45px para 80px para dar mais altura ao banner */
-            min-height: 480px;  /* Altura mínima para garantir que a imagem se destaque */
-            gap: 40px;
+            padding: 45px 35px;
+            gap: 30px;
             align-items: center;
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
             color: white;
@@ -366,14 +365,10 @@
             flex-direction: column;
             justify-content: center;
             padding-right: 15px;
-            background: rgba(20, 45, 30, 0.65); /* Fundo sutil atrás do texto para destacar a leitura */
-            padding: 30px;
-            border-radius: 24px;
-            backdrop-filter: blur(4px);
         }
 
         .fisica-destaque-left h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 800;
@@ -381,9 +376,9 @@
 
         .fisica-destaque-left p {
             color: #E8F5E9;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .btn-fisica-acao {
@@ -405,23 +400,23 @@
         }
 
         .fisica-cards-right {
-            flex: 1.5;
+            flex: 1.6;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
         .card-produto-fisica {
-            background: rgba(250, 252, 248, 0.92);
+            background: rgba(250, 252, 248, 0.95);
             backdrop-filter: blur(8px);
             border-radius: 24px;
-            padding: 30px 24px;
+            padding: 28px 22px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: #2D4336;
             transition: transform 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
         .card-produto-fisica:hover {
@@ -429,7 +424,7 @@
         }
 
         .card-produto-body h4 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #2E5B3E;
             font-weight: 700;
             margin-bottom: 12px;
@@ -671,7 +666,7 @@
             </div>
         </section>
 
-        <!-- FÍSICA (BANNER AMPLIADO PARA EXIBIR A IMAGEM COM CLAREZA) -->
+        <!-- FÍSICA (COM IMAGEM DE FUNDO NO BANNER E APENAS OS TEXTOS ORIGINAIS NOS CARDS) -->
         <section id="fisica">
             <div class="fisica-banner-container">
                 <!-- Painel de Destaque na Esquerda -->
@@ -681,6 +676,141 @@
                     <a href="#solucao" class="btn-fisica-acao">Ver Solução</a>
                 </div>
 
-                <!-- 2 Cards com os Textos Originais -->
+                <!-- 2 Cards com os Textos Originais (Sem imagens internas e sem botões de "Saiba mais") -->
                 <div class="fisica-cards-right">
-                    <!-- Card 1:
+                    <!-- Card 1: Conteúdos Estudados -->
+                    <div class="card-produto-fisica">
+                        <div class="card-produto-body">
+                            <h4>Conteúdos Estudados</h4>
+                            <ul>
+                                <li>Energia e Potência Elétrica</li>
+                                <li>Tensão e Corrente Elétrica</li>
+                                <li>Cálculo de Consumo de Aparelhos</li>
+                                <li>Eficiência Energética</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Relação com o Projeto -->
+                    <div class="card-produto-fisica">
+                        <div class="card-produto-body">
+                            <h4>Relação com o Projeto</h4>
+                            <p>A Física permite calcular a energia consumida a partir da potência e do tempo de uso, possibilitando estimar como mudanças de hábitos reduzem o desperdício.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GEOGRAFIA -->
+        <section id="geografia">
+            <h2>Geografia</h2>
+            <p>Análise da distribuição espacial do consumo e das desigualdades no acesso à energia.</p>
+            <div class="grid-cards">
+                <div class="caixa">
+                    <h3>Conteúdos Estudados</h3>
+                    <ul>
+                        <li>Espaço Geográfico e Sociedade/Natureza</li>
+                        <li>Desigualdade Socioespacial e População</li>
+                        <li>Recursos Naturais e Impactos Ambientais</li>
+                        <li>Desenvolvimento Sustentável</li>
+                    </ul>
+                </div>
+                <div class="caixa">
+                    <h3>Relação com o Projeto</h3>
+                    <p>Investiga variações regionais e de classe social no consumo de energia elétrica, abordando o conceito de pobreza energética e eficiência no uso de recursos.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Dados, mapas ou imagens</h3>
+                    <img src="geopi.jpg" alt="Dados de Geografia" style="width:100%; border-radius:8px; margin-top:10px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- FILOSOFIA -->
+        <section id="filosofia">
+            <h2>Filosofia</h2>
+            <p>Reflexão crítica sobre ética, consumismo e responsabilidade ambiental.</p>
+            <div class="grid-cards">
+                <div class="caixa">
+                    <h3>Conteúdos Estudados</h3>
+                    <ul>
+                        <li>Ética e Responsabilidade Individual/Coletiva</li>
+                        <li>Sociedade, Tecnologia e Consumismo</li>
+                        <li>Relação entre Ser Humano e Natureza</li>
+                        <li>Sustentabilidade e Consequências Sociais</li>
+                    </ul>
+                </div>
+                <div class="caixa">
+                    <h3>Reflexão sobre o problema</h3>
+                    <p>A Filosofia permite questionar <b>como</b> e <b>por que</b> consumimos energia e quais responsabilidades temos diante dos impactos desse consumo, promovendo o consumo consciente.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Questões Levantadas</h3>
+                    <ul>
+                        <li>É correto consumir energia sem considerar suas consequências?</li>
+                        <li>Quem é o responsável pelo desperdício: o indivíduo, as empresas ou o poder público?</li>
+                        <li>Todos têm o mesmo acesso à energia?</li>
+                        <li>A tecnologia também pode ajudar a reduzir o consumo?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUÇÃO -->
+        <section id="solucao">
+            <h2>Possível Solução</h2>
+            <div class="grid-cards">
+                <div class="caixa">
+                    <h3>Nossa Proposta</h3>
+                    <p>Um sistema web interativo que permita coletar informações sobre o uso de aparelhos eletrônicos e estimar o consumo de energia em tempo real, apresentando dados em gráficos e tabelas.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Como a solução funciona?</h3>
+                    <p>O sistema funciona como uma ferramenta educativa, apresentando informações sobre consumo consciente, estimativas financeiras e impactos ambientais.</p>
+                </div>
+                <div class="caixa">
+                    <h3>Integração Interdisciplinar</h3>
+                    <p>A Física calcula; a Geografia contextualiza no espaço; a Filosofia gera conscientização ética; e a Programação Web transforma esses saberes em uma ferramenta prática.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERÊNCIAS -->
+        <section id="referencias">
+            <h2>Referências</h2>
+            <div class="caixa">
+                <ul>
+                    <li>ARISTÓTELES. Ética a Nicômaco. Tradução de Mário da Gama Kury. Brasília: Editora Universidade de Brasília, 1985.</li>
+                    <li>GRACIÁN, Baltasar. A arte da prudência. São Paulo: Martin Claret, 2005.</li>
+                    <li>AUBENQUE, Pierre. A prudência em Aristóteles. Tradução de Marisa Lopes. São Paulo: Discurso Editorial, 2003.</li>
+                    <li>BIN, Adriano Sotero. A phronêsis na Ética a Nicômaco. 2018. Dissertação (Mestrado em Filosofia) — UnB, 2018.</li>
+                    <li>EMPRESA DE PESQUISA ENERGÉTICA (EPE). Balanço Energético Nacional 2026: relatório síntese — ano base 2025. Rio de Janeiro: EPE, 2026.</li>
+                    <li>EMPRESA DE PESQUISA ENERGÉTICA (EPE). Consumo mensal de energia elétrica por classe (regiões e subsistemas). Rio de Janeiro: EPE, 2026.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Projeto Integrador - Técnico em Informática | IFPI</p>
+        <p>Ano: 2026</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
