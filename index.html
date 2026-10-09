@@ -349,6 +349,120 @@
             font-weight: 600;
         }
 
+        /* ===== NOVO ESTILO DA SEÇÃO FÍSICA (LAYOUT BANNER DA SUA IMAGEM) ===== */
+        .fisica-banner-container {
+            display: flex;
+            background: linear-gradient(135deg, #1D3B2A, #2E5B3E);
+            border-radius: 32px;
+            padding: 35px;
+            gap: 30px;
+            align-items: stretch;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            color: white;
+        }
+
+        .fisica-destaque-left {
+            flex: 1.1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 15px;
+        }
+
+        .fisica-destaque-left h2 {
+            font-size: 2.2rem;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .fisica-destaque-left p {
+            color: #D5E8D4;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn-fisica-acao {
+            display: inline-block;
+            align-self: flex-start;
+            background: #E89E3A;
+            color: #1D3B2A;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-fisica-acao:hover {
+            background: #FFB74D;
+            transform: translateY(-2px);
+        }
+
+        .fisica-cards-right {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card-produto-fisica {
+            background: #F9FAF8;
+            border-radius: 22px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #2D4336;
+            transition: transform 0.3s ease;
+        }
+
+        .card-produto-fisica:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-produto-img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 12px;
+        }
+
+        .card-produto-body h4 {
+            font-size: 1.05rem;
+            color: #2E5B3E;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-produto-body p {
+            font-size: 0.88rem;
+            color: #556B5C;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .btn-card-pequeno {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #E89E3A;
+            color: #FFFFFF;
+            padding: 8px 12px;
+            border-radius: 18px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: background 0.3s ease;
+        }
+
+        .btn-card-pequeno:hover {
+            background: #D88E2A;
+        }
+
         /* ===== DEMAIS SEÇÕES ===== */
         section h2 {
             font-size: 2rem;
@@ -415,7 +529,6 @@
             margin-bottom: 6px;
         }
 
-        #fisica .caixa { border-left-color: #00BCD4; }
         #geografia .caixa { border-left-color: #4CAF50; }
         #filosofia .caixa { border-left-color: #FF9800; }
         #solucao .caixa { border-left-color: #FFC107; background: #FFFDE7; }
@@ -436,7 +549,7 @@
 
         /* RESPONSIVIDADE */
         @media (max-width: 900px) {
-            .hero, .sobre-bloco-top {
+            .hero, .sobre-bloco-top, .fisica-banner-container {
                 flex-direction: column;
                 text-align: center;
             }
@@ -445,8 +558,12 @@
                 justify-content: center;
             }
 
-            .sobre-cards-grid {
+            .sobre-cards-grid, .fisica-cards-right {
                 grid-template-columns: 1fr;
+            }
+
+            .btn-fisica-acao {
+                align-self: center;
             }
 
             section h2::after {
@@ -495,7 +612,7 @@
         <section>
             <h2 class="sobre-titulo-principal">Sobre o Projeto</h2>
 
-            <!-- Bloco Superior: Texto na esquerda, Imagem arredondada na direita -->
+            <!-- Bloco Superior -->
             <div class="sobre-bloco-top">
                 <div class="sobre-texto-left">
                     <h3>O Problema</h3>
@@ -504,11 +621,11 @@
                 </div>
 
                 <div class="sobre-img-right">
-                    <img src="geopi.jpg" alt="Imagem Ilustrativa do Projeto">
+                    <img src="https://quantumengenharia.com.br/wp-content/uploads/2019/06/mau-uso-da-energia.jpg" alt="Mau uso da energia e impacto no meio ambiente">
                 </div>
             </div>
 
-            <!-- 3 Cards Inferiores sem Emojis -->
+            <!-- 3 Cards Inferiores -->
             <div class="sobre-cards-grid">
                 <!-- Card 1: Tema -->
                 <div class="card-suave">
@@ -562,27 +679,53 @@
             </div>
         </section>
 
-        <!-- FÍSICA -->
+        <!-- FÍSICA (ESTILO BANNER DA IMAGEM) -->
         <section id="fisica">
-            <h2>Física</h2>
-            <p>Análise técnica do consumo de energia a partir das grandezas elétricas e do funcionamento dos equipamentos.</p>
-            <div class="grid-cards">
-                <div class="caixa">
-                    <h3>Conteúdos Estudados</h3>
-                    <ul>
-                        <li>Energia e Potência Elétrica</li>
-                        <li>Tensão e Corrente Elétrica</li>
-                        <li>Cálculo de Consumo de Aparelhos</li>
-                        <li>Eficiência Energética</li>
-                    </ul>
+            <div class="fisica-banner-container">
+                <!-- Painel de Destaque na Esquerda -->
+                <div class="fisica-destaque-left">
+                    <h2>Física</h2>
+                    <p>Compreenda os conceitos fundamentais sobre grandezas elétricas, potência e consumo de energia no cotidiano.</p>
+                    <a href="#solucao" class="btn-fisica-acao">Analisar Cálculos</a>
                 </div>
-                <div class="caixa">
-                    <h3>Relação com o Projeto</h3>
-                    <p>A Física permite calcular a energia consumida a partir da potência e do tempo de uso, possibilitando estimar como mudanças de hábitos reduzem o desperdício.</p>
-                </div>
-                <div class="caixa">
-                    <h3>Imagem ou gráfico</h3>
-                    <img src="FISICAPI.jpg" alt="Gráfico de Física" style="width:100%; border-radius:8px; margin-top:10px;">
+
+                <!-- 3 Cards Verticais de Exibição na Direita -->
+                <div class="fisica-cards-right">
+                    <!-- Card 1 -->
+                    <div class="card-produto-fisica">
+                        <div>
+                            <img src="FISICAPI.jpg" alt="Grandezas Elétricas" class="card-produto-img">
+                            <div class="card-produto-body">
+                                <h4>Grandezas Elétricas</h4>
+                                <p>Tensão, corrente e potência elétrica aplicadas aos aparelhos.</p>
+                            </div>
+                        </div>
+                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card-produto-fisica">
+                        <div>
+                            <img src="FISICAPI.jpg" alt="Cálculo de Consumo" class="card-produto-img">
+                            <div class="card-produto-body">
+                                <h4>Cálculo de Consumo</h4>
+                                <p>Estimativa de consumo em kWh a partir do tempo de uso.</p>
+                            </div>
+                        </div>
+                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card-produto-fisica">
+                        <div>
+                            <img src="FISICAPI.jpg" alt="Eficiência Energética" class="card-produto-img">
+                            <div class="card-produto-body">
+                                <h4>Eficiência Energética</h4>
+                                <p>Como otimizar o uso e diminuir o desperdício.</p>
+                            </div>
+                        </div>
+                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                    </div>
                 </div>
             </div>
         </section>
