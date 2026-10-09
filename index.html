@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Projeto Integrador</title>
-
+    <title>Projeto Integrador - Consumo de Energia Elétrica</title>
     <style>
-/* ==========================================
+        /* ==========================================
            ESTILOS GERAIS & PALETA
            ========================================== */
 
@@ -349,20 +345,22 @@
             font-weight: 600;
         }
 
-        /* ===== SEÇÃO FÍSICA (COM TEXTOS ORIGINAIS INTEGRADOS) ===== */
+        /* ===== SEÇÃO FÍSICA (COM IMAGEM DE FUNDO NO BANNER E QUADRADOS LIMPOS) ===== */
         .fisica-banner-container {
             display: flex;
-            background: linear-gradient(135deg, #1D3B2A, #2E5B3E);
+            background: linear-gradient(rgba(20, 45, 30, 0.78), rgba(20, 45, 30, 0.78)), url('FISICAPI.jpg');
+            background-size: cover;
+            background-position: center;
             border-radius: 32px;
-            padding: 35px;
+            padding: 45px 35px;
             gap: 30px;
-            align-items: stretch;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
             color: white;
         }
 
         .fisica-destaque-left {
-            flex: 1.1;
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -370,14 +368,14 @@
         }
 
         .fisica-destaque-left h2 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 800;
         }
 
         .fisica-destaque-left p {
-            color: #D5E8D4;
+            color: #E8F5E9;
             font-size: 1.05rem;
             line-height: 1.6;
             margin-bottom: 30px;
@@ -402,77 +400,54 @@
         }
 
         .fisica-cards-right {
-            flex: 2;
+            flex: 1.6;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
         .card-produto-fisica {
-            background: #F9FAF8;
-            border-radius: 22px;
-            padding: 20px 18px;
+            background: rgba(250, 252, 248, 0.95);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
+            padding: 28px 22px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             color: #2D4336;
             transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
         .card-produto-fisica:hover {
             transform: translateY(-6px);
         }
 
-        .card-produto-img {
-            width: 100%;
-            height: 130px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 14px;
-        }
-
         .card-produto-body h4 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #2E5B3E;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #E89E3A;
+            padding-bottom: 6px;
+            display: inline-block;
         }
 
         .card-produto-body p {
-            font-size: 0.9rem;
-            color: #556B5C;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #4A6354;
+            line-height: 1.6;
         }
 
         .card-produto-body ul {
             list-style-type: disc;
             padding-left: 18px;
-            font-size: 0.88rem;
-            color: #556B5C;
+            font-size: 0.92rem;
+            color: #4A6354;
         }
 
         .card-produto-body ul li {
-            margin-bottom: 4px;
-        }
-
-        .btn-card-pequeno {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #E89E3A;
-            color: #FFFFFF;
-            padding: 8px 12px;
-            border-radius: 18px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 700;
-            transition: background 0.3s ease;
-            margin-top: 15px;
-        }
-
-        .btn-card-pequeno:hover {
-            background: #D88E2A;
+            margin-bottom: 6px;
         }
 
         /* ===== DEMAIS SEÇÕES ===== */
@@ -691,17 +666,17 @@
             </div>
         </section>
 
-        <!-- FÍSICA (COM OS SEUS TEXTOS ORIGINAIS EXATOS) -->
+        <!-- FÍSICA (COM IMAGEM DE FUNDO NO BANNER E APENAS OS TEXTOS ORIGINAIS NOS CARDS) -->
         <section id="fisica">
             <div class="fisica-banner-container">
                 <!-- Painel de Destaque na Esquerda -->
                 <div class="fisica-destaque-left">
                     <h2>Física</h2>
                     <p>Análise técnica do consumo de energia a partir das grandezas elétricas e do funcionamento dos equipamentos.</p>
-                    <a href="#solucao" class="btn-fisica-acao">Ver Cálculos</a>
+                    <a href="#solucao" class="btn-fisica-acao">Ver Solução</a>
                 </div>
 
-                <!-- 3 Cards com o Teu Conteúdo Original -->
+                <!-- 2 Cards com os Textos Originais (Sem imagens internas e sem botões de "Saiba mais") -->
                 <div class="fisica-cards-right">
                     <!-- Card 1: Conteúdos Estudados -->
                     <div class="card-produto-fisica">
@@ -714,7 +689,6 @@
                                 <li>Eficiência Energética</li>
                             </ul>
                         </div>
-                        <a href="#solucao" class="btn-card-pequeno">Saiba Mais</a>
                     </div>
 
                     <!-- Card 2: Relação com o Projeto -->
@@ -723,18 +697,6 @@
                             <h4>Relação com o Projeto</h4>
                             <p>A Física permite calcular a energia consumida a partir da potência e do tempo de uso, possibilitando estimar como mudanças de hábitos reduzem o desperdício.</p>
                         </div>
-                        <a href="#solucao" class="btn-card-pequeno">Saiba Mais</a>
-                    </div>
-
-                    <!-- Card 3: Imagem ou gráfico -->
-                    <div class="card-produto-fisica">
-                        <div>
-                            <div class="card-produto-body">
-                                <h4>Imagem ou gráfico</h4>
-                            </div>
-                            <img src="FISICAPI.jpg" alt="Gráfico de Física" class="card-produto-img">
-                        </div>
-                        <a href="#solucao" class="btn-card-pequeno">Ver Gráfico</a>
                     </div>
                 </div>
             </div>
