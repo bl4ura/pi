@@ -9,10 +9,8 @@
     <title>Projeto Integrador</title>
 
     <style>
-
 /* ==========================================
-           PROJETO INTEGRADOR - ESTILOS INSPIRADOS
-           Paleta: Verde Sustentável, Azul Elétrico, Laranja
+           ESTILOS GERAIS & PALETA
            ========================================== */
 
         * {
@@ -27,8 +25,8 @@
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: #E8F5E9; /* Verde claro orgânico / fundo suave */
-            color: #1B3B2B; /* Verde escuro profundo para textos */
+            background-color: #EBF3E8; /* Verde bem claro suave */
+            color: #2D4336;
             line-height: 1.6;
         }
 
@@ -48,7 +46,7 @@
         .logo {
             font-size: 1.4rem;
             font-weight: 800;
-            color: #2E7D32;
+            color: #2E5B3E;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -66,7 +64,7 @@
         }
 
         nav a {
-            color: #2E7D32;
+            color: #2E5B3E;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
@@ -78,7 +76,7 @@
         }
 
         .nav-btn {
-            background: #2E7D32;
+            background: #2E5B3E;
             color: white !important;
             padding: 8px 20px;
             border-radius: 20px;
@@ -86,17 +84,17 @@
         }
 
         .nav-btn:hover {
-            background: #1B5E20;
+            background: #1E3D2A;
             transform: translateY(-2px);
         }
 
-        /* ----- SEÇÃO HERO (INÍCIO) ----- */
+        /* ----- HERO SECTION ----- */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 8% 80px 8%;
-            min-height: 80vh;
+            padding: 40px 8% 60px 8%;
+            min-height: 70vh;
             gap: 40px;
         }
 
@@ -107,28 +105,27 @@
 
         .hero-tag {
             display: inline-block;
-            background: #C8E6C9;
-            color: #2E7D32;
+            background: #D5E8D4;
+            color: #2E5B3E;
             padding: 6px 16px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .hero h1 {
             font-size: 2.8rem;
             line-height: 1.2;
-            color: #1B3B2B;
+            color: #2E5B3E;
             font-weight: 800;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 1.1rem;
-            color: #37474F;
+            color: #4A6354;
             margin-bottom: 30px;
         }
 
@@ -140,21 +137,20 @@
 
         .btn-primary {
             display: inline-block;
-            background-color: #2E7D32;
+            background-color: #2E5B3E;
             color: white;
             padding: 14px 32px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
-            box-shadow: 0 4px 14px rgba(46, 125, 50, 0.3);
+            box-shadow: 0 4px 14px rgba(46, 91, 62, 0.25);
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background-color: #1B5E20;
+            background-color: #1E3D2A;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
         }
 
         .btn-secondary {
@@ -180,7 +176,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         .hero-image img {
@@ -188,16 +183,16 @@
             max-width: 450px;
             height: auto;
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             object-fit: cover;
         }
 
-        /* ----- CONTEÚDO PRINCIPAL (SEÇÕES SEGUINTES) ----- */
+        /* ----- CONTEÚDO PRINCIPAL ----- */
         main {
             background: #FFFFFF;
             border-radius: 40px 40px 0 0;
             padding: 60px 8%;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.02);
         }
 
         section {
@@ -205,9 +200,153 @@
             scroll-margin-top: 100px;
         }
 
+        /* ===== SEÇÃO SOBRE O PROJETO (ESTILO DA SUA IMAGEM) ===== */
+        .sobre-titulo-principal {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #2E5B3E;
+            font-weight: 800;
+            margin-bottom: 45px;
+        }
+
+        .sobre-bloco-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .sobre-texto-left {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .sobre-texto-left h3 {
+            font-size: 1.4rem;
+            color: #2E5B3E;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .sobre-texto-left p {
+            color: #556B5C;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-sobre {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #2E5B3E;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sobre:hover {
+            background-color: #1E3D2A;
+            transform: translateX(4px);
+        }
+
+        .sobre-img-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sobre-img-right img {
+            width: 100%;
+            max-width: 480px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 32px; /* Cantos bem arredondados como na imagem */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        /* 3 CARDS INFERIORES */
+        .sobre-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card-suave {
+            background-color: #EBF3E8; /* Fundo suave */
+            border-radius: 28px;
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 260px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-suave:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card-icon-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1.5 solid #2E5B3E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            background: rgba(46, 91, 62, 0.08);
+        }
+
+        .card-suave h4 {
+            font-size: 1.2rem;
+            color: #2E5B3E;
+            font-weight: 700;
+        }
+
+        .card-suave p, .card-suave ul {
+            color: #556B5C;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .card-suave ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-suave ul li {
+            padding: 2px 0;
+        }
+
+        .card-bottom-line {
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(46, 91, 62, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #2E5B3E;
+            font-weight: 600;
+        }
+
+        /* ===== DEMAIS SEÇÕES ===== */
         section h2 {
-            font-size: 2.2rem;
-            color: #1B3B2B;
+            font-size: 2rem;
+            color: #2E5B3E;
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
@@ -224,111 +363,12 @@
         }
 
         section > p {
-            color: #4A5A6A;
+            color: #556B5C;
             font-size: 1.05rem;
             margin-bottom: 30px;
             max-width: 800px;
         }
 
-        /* ----- DESIGN MODERNO DA SEÇÃO SOBRE O PROJETO ----- */
-        .sobre-container {
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 30px;
-            align-items: stretch;
-            margin-top: 20px;
-        }
-
-        .painel-principal {
-            background: #F4F8F5;
-            border-radius: 24px;
-            padding: 35px;
-            border: 1px solid #E0EBE2;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .item-info {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-
-        .icone-box {
-            font-size: 1.5rem;
-            background: #E8F5E9;
-            width: 46px;
-            height: 46px;
-            min-width: 46px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 6px rgba(46,125,50,0.1);
-        }
-
-        .item-info h3 {
-            font-size: 1.15rem;
-            color: #1B3B2B;
-            margin-bottom: 6px;
-        }
-
-        .item-info p {
-            color: #4A5A6A;
-            font-size: 0.98rem;
-            line-height: 1.6;
-        }
-
-        .painel-equipe {
-            background: linear-gradient(135deg, #1B3B2B, #2E7D32);
-            color: white;
-            border-radius: 24px;
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 30px rgba(46,125,50,0.15);
-        }
-
-        .equipe-header h3 {
-            font-size: 1.4rem;
-            color: #FFFFFF;
-            margin-bottom: 8px;
-        }
-
-        .equipe-header p {
-            color: #C8E6C9;
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-        }
-
-        .integrantes-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .badge-aluno {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(5px);
-            padding: 12px 18px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .badge-aluno:hover {
-            background: rgba(255, 255, 255, 0.22);
-            transform: translateX(5px);
-        }
-
-        /* ----- CARDS/CAIXAS DAS OUTRAS SEÇÕES ----- */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -336,27 +376,27 @@
         }
 
         .caixa {
-            background: #F5F7FA;
+            background: #F8FAF7;
             border-radius: 16px;
             padding: 25px;
-            border-left: 5px solid #2E7D32;
+            border-left: 5px solid #2E5B3E;
             transition: all 0.3s ease;
         }
 
         .caixa:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
             background: #FFFFFF;
         }
 
         .caixa h3 {
-            color: #1B3B2B;
-            font-size: 1.25rem;
+            color: #2E5B3E;
+            font-size: 1.2rem;
             margin-bottom: 10px;
         }
 
         .caixa p, .caixa ul {
-            color: #37474F;
+            color: #4A6354;
             font-size: 0.95rem;
         }
 
@@ -369,16 +409,15 @@
             margin-bottom: 6px;
         }
 
-        /* VARIAÇÕES TEMÁTICAS DE CORES NAS ABAS */
         #fisica .caixa { border-left-color: #00BCD4; }
         #geografia .caixa { border-left-color: #4CAF50; }
         #filosofia .caixa { border-left-color: #FF9800; }
         #solucao .caixa { border-left-color: #FFC107; background: #FFFDE7; }
 
-        /* ----- RODAPÉ ----- */
+        /* RODAPÉ */
         footer {
-            background-color: #1B3B2B;
-            color: #E8F5E9;
+            background-color: #2E5B3E;
+            color: #EBF3E8;
             text-align: center;
             padding: 40px 8%;
             margin-top: 40px;
@@ -391,17 +430,16 @@
 
         /* RESPONSIVIDADE */
         @media (max-width: 900px) {
-            .hero {
+            .hero, .sobre-bloco-top {
                 flex-direction: column;
                 text-align: center;
-                padding-top: 20px;
             }
 
             .hero-actions {
                 justify-content: center;
             }
 
-            .sobre-container {
+            .sobre-cards-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -409,25 +447,12 @@
                 margin: 6px auto 0 auto;
             }
         }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         BARRA DE NAVEGAÇÃO
-    ========================== -->
+    <!-- BARRA DE NAVEGAÇÃO -->
     <header>
         <a href="#inicio" class="logo">⚡ Energia<span>Comunidade</span></a>
 
@@ -440,9 +465,7 @@
         </nav>
     </header>
 
-    <!-- =========================
-         HERO SECTION (APRESENTAÇÃO)
-    ========================== -->
+    <!-- HERO SECTION -->
     <section class="hero" id="inicio">
         <div class="hero-content">
             <span class="hero-tag">Projeto Integrador 2B</span>
@@ -459,62 +482,69 @@
         </div>
     </section>
 
-    <!-- =========================
-         CONTEÚDO PRINCIPAL
-    ========================== -->
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- SOBRE O PROJETO (DESIGN NOVO E MODERNO) -->
+        <!-- SOBRE O PROJETO (ESTRUTURA IDENTICA À SUA IMAGEM) -->
         <section>
-            <h2>Sobre o Projeto</h2>
-            <p>Uma visão geral da proposta, o problema identificado e as mentes por trás da pesquisa.</p>
+            <h2 class="sobre-titulo-principal">Sobre o Projeto</h2>
 
-            <div class="sobre-container">
-                <div class="painel-principal">
-                    <div class="item-info">
-                        <div class="icone-box">💡</div>
-                        <div>
-                            <h3>Tema</h3>
-                            <p>Consumo de Energia Elétrica e seus Impactos Sociais e Ambientais na Comunidade.</p>
-                        </div>
+            <!-- Bloco Superior: Texto na esquerda, Imagem arredondada na direita -->
+            <div class="sobre-bloco-top">
+                <div class="sobre-texto-left">
+                    <h3>O Problema</h3>
+                    <p>O consumo excessivo e o desperdício no uso cotidiano de aparelhos eletrônicos aumentam significativamente os custos das famílias e geram impactos ambientais diretos na produção e distribuição de eletricidade.</p>
+                    <a href="#solucao" class="btn-sobre">Conhecer Solução ►</a>
+                </div>
+
+                <div class="sobre-img-right">
+                    <img src="geopi.jpg" alt="Imagem Ilustrativa do Projeto">
+                </div>
+            </div>
+
+            <!-- 3 Cards Inferiores -->
+            <div class="sobre-cards-grid">
+                <!-- Card 1: Tema -->
+                <div class="card-suave">
+                    <div class="card-top">
+                        <div class="card-icon-circle">⚡</div>
+                        <h4>Tema</h4>
+                        <p>Consumo de Energia Elétrica e seus Impactos Sociais e Ambientais na Comunidade.</p>
                     </div>
-
-                    <div class="item-info">
-                        <div class="icone-box">⚠️</div>
-                        <div>
-                            <h3>O Problema</h3>
-                            <p>O consumo excessivo e o desperdício pelo uso cotidiano de aparelhos eletrônicos aumentam os custos familiares e geram impactos ambientais relacionados à produção de eletricidade.</p>
-                        </div>
-                    </div>
-
-                    <div class="item-info">
-                        <div class="icone-box">🎯</div>
-                        <div>
-                            <h3>Objetivo</h3>
-                            <p>Investigar hábitos de consumo na comunidade usando Física, Geografia, Filosofia e Programação Web para conscientizar sobre práticas mais eficientes.</p>
-                        </div>
+                    <div class="card-bottom-line">
+                        <span>Saiba mais</span>
+                        <span>▼</span>
                     </div>
                 </div>
 
-                <div class="painel-equipe">
-                    <div class="equipe-header">
-                        <h3>Equipe de Desenvolvimento 👥</h3>
-                        <p>Alunas do 2º Ano Técnico em Informática</p>
+                <!-- Card 2: Objetivo -->
+                <div class="card-suave">
+                    <div class="card-top">
+                        <div class="card-icon-circle">🎯</div>
+                        <h4>Objetivo</h4>
+                        <p>Investigar os hábitos de consumo na comunidade integrando Física, Geografia, Filosofia e Programação Web para conscientizar sobre o uso eficiente.</p>
                     </div>
+                    <div class="card-bottom-line">
+                        <span>Ver detalhes</span>
+                        <span>▼</span>
+                    </div>
+                </div>
 
-                    <div class="integrantes-grid">
-                        <div class="badge-aluno">
-                            <span>🎓</span> Annajulya de Sousa Alvarenga
-                        </div>
-                        <div class="badge-aluno">
-                            <span>🎓</span> Giovanna Beatriz Santos Oliveira
-                        </div>
-                        <div class="badge-aluno">
-                            <span>🎓</span> Jullyana Sophia da Silva Magalhães
-                        </div>
-                        <div class="badge-aluno">
-                            <span>🎓</span> Laura Beatriz Barbosa Freitas
-                        </div>
+                <!-- Card 3: Integrantes -->
+                <div class="card-suave">
+                    <div class="card-top">
+                        <div class="card-icon-circle">👥</div>
+                        <h4>Integrantes</h4>
+                        <ul>
+                            <li>• Annajulya de Sousa Alvarenga</li>
+                            <li>• Giovanna Beatriz Santos Oliveira</li>
+                            <li>• Jullyana Sophia da Silva Magalhães</li>
+                            <li>• Laura Beatriz Barbosa Freitas</li>
+                        </ul>
+                    </div>
+                    <div class="card-bottom-line">
+                        <span>2º Ano Informática</span>
+                        <span>▼</span>
                     </div>
                 </div>
             </div>
@@ -636,16 +666,13 @@
 
     </main>
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
+    <!-- RODAPÉ -->
     <footer>
         <p>Projeto Integrador - Técnico em Informática | IFPI</p>
         <p>Ano: 2026</p>
     </footer>
 
     <script>
-        // Rolagem suave para os links do menu
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
