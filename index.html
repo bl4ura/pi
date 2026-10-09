@@ -15,6 +15,7 @@
    Alunos do 2º Ano Técnico em Informática
    ========================================== */
 
+
 /* ----- RESET E CONFIGURAÇÕES GERAIS ----- */
 * {
     margin: 0;
@@ -24,20 +25,21 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f4f8;
-    color: #7d1e84;
+    background: #f5f7fa;
+    color: #212121;
     line-height: 1.6;
     padding: 20px;
 }
 
 /* ----- CABEÇALHO ----- */
 header {
-    background: linear-gradient(135deg, #1a3a5c, #2a5a7c);
+    background: linear-gradient(135deg, #2E7D32, #1b4d20);
     color: white;
     text-align: center;
     padding: 40px 20px;
     border-radius: 12px 12px 0 0;
     margin-bottom: 0;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
 }
 
 header h1 {
@@ -49,7 +51,7 @@ header h1 {
 
 header p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
     font-weight: 300;
 }
 
@@ -65,11 +67,11 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid #e67e22;
+    border-bottom: 3px solid #007BFF;
 }
 
 nav a {
-    color: #1a3a5c;
+    color: #2E7D32;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -80,10 +82,10 @@ nav a {
 }
 
 nav a:hover {
-    background: #1a3a5c;
+    background: #2E7D32;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(26, 58, 92, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
 }
 
 /* ----- CONTEÚDO PRINCIPAL ----- */
@@ -100,11 +102,9 @@ main {
 section {
     margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 2px solid #eaeef3;
-	 scroll-margin-top: 80px;
+    border-bottom: 2px solid #e9ecef;
+    scroll-margin-top: 80px;
 }
-
-
 
 section:last-child {
     border-bottom: none;
@@ -113,24 +113,24 @@ section:last-child {
 
 section h2 {
     font-size: 2rem;
-    color: #1a3a5c;
+    color: #2E7D32;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 4px solid #e67e22;
+    border-bottom: 4px solid #007BFF;
     display: inline-block;
 }
 
 section > p {
-    color: #4a5a6a;
+    color: #333333;
     font-size: 1.05rem;
     margin-bottom: 25px;
     max-width: 800px;
 }
 
-/* ----- CAIXAS (CARDS) ----- */
+/* ----- CAIXAS (CARDS) GENERALIZADAS ----- */
 .caixa {
-    background: #f8fafc;
-    border-left: 5px solid #e67e22;
+    background: #f8f9fa;
+    border-left: 5px solid #007BFF;
     padding: 20px 25px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -145,13 +145,13 @@ section > p {
 }
 
 .caixa h3 {
-    color: #1a3a5c;
+    color: #2E7D32;
     font-size: 1.2rem;
     margin-bottom: 8px;
 }
 
 .caixa p {
-    color: #2a3a4a;
+    color: #212121;
     font-size: 1rem;
     line-height: 1.7;
 }
@@ -163,55 +163,71 @@ section > p {
 
 .caixa ul li {
     padding: 6px 0 6px 30px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23e67e22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23007BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
     background-size: 18px;
-    color: #2a3a4a;
-    border-bottom: 1px solid #eaeef3;
+    color: #212121;
+    border-bottom: 1px solid #e9ecef;
 }
 
 .caixa ul li:last-child {
     border-bottom: none;
 }
 
-/* ----- SEÇÃO FÍSICA (destaque especial) ----- */
+/* ----- SEÇÃO FÍSICA (Azul Tecnológico) ----- */
 #fisica .caixa {
-    border-left-color: #2980b9;
+    border-left-color: #00BCD4;
 }
 
 #fisica .caixa:hover {
-    border-left-color: #1a5276;
+    border-left-color: #0097a7;
 }
 
-/* ----- SEÇÃO GEOGRAFIA (destaque especial) ----- */
+#fisica .caixa h3 {
+    color: #00838f;
+}
+
+/* ----- SEÇÃO GEOGRAFIA (Verde Sustentável) ----- */
 #geografia .caixa {
-    border-left-color: #27ae60;
+    border-left-color: #4CAF50;
 }
 
 #geografia .caixa:hover {
-    border-left-color: #1e8449;
+    border-left-color: #2E7D32;
 }
 
-/* ----- SEÇÃO FILOSOFIA (destaque especial) ----- */
+#geografia .caixa h3 {
+    color: #2E7D32;
+}
+
+/* ----- SEÇÃO FILOSOFIA (Laranja Impacto) ----- */
 #filosofia .caixa {
-    border-left-color: #8e44ad;
+    border-left-color: #FF9800;
 }
 
 #filosofia .caixa:hover {
-    border-left-color: #6c3483;
+    border-left-color: #e68a00;
 }
 
-/* ----- SEÇÃO SOLUÇÃO (destaque especial) ----- */
+#filosofia .caixa h3 {
+    color: #e65100;
+}
+
+/* ----- SEÇÃO SOLUÇÃO (Amarelo Iluminação) ----- */
 #solucao .caixa {
-    border-left-color: #e67e22;
-    background: #fef9f0;
+    border-left-color: #FFC107;
+    background: #fffde7;
 }
 
 #solucao .caixa:hover {
-    background: #fff6e5;
-    border-left-color: #d35400;
+    background: #fff9c4;
+    border-left-color: #ffa000;
 }
 
-/* ----- IMAGENS (placeholder) ----- */
+#solucao .caixa h3 {
+    color: #f57f17;
+}
+
+/* ----- IMAGENS ----- */
 img {
     max-width: 100%;
     height: auto;
@@ -230,7 +246,7 @@ table {
 }
 
 table th {
-    background: #1a3a5c;
+    background: #2E7D32;
     color: white;
     padding: 12px 16px;
     text-align: left;
@@ -238,11 +254,11 @@ table th {
 
 table td {
     padding: 10px 16px;
-    border-bottom: 1px solid #eaeef3;
+    border-bottom: 1px solid #e9ecef;
 }
 
 table tr:hover td {
-    background: #f0f4f8;
+    background: #f5f7fa;
 }
 
 /* ----- LISTA DE REFERÊNCIAS ----- */
@@ -253,11 +269,11 @@ table tr:hover td {
 
 #referencias ul li {
     padding: 10px 15px;
-    background: #f8fafc;
+    background: #f8f9fa;
     margin-bottom: 8px;
     border-radius: 6px;
-    border-left: 4px solid #1a3a5c;
-    color: #2a3a4a;
+    border-left: 4px solid #2E7D32;
+    color: #212121;
 }
 
 #referencias ul li:hover {
@@ -268,8 +284,8 @@ table tr:hover td {
 footer {
     max-width: 1100px;
     margin: 20px auto 0;
-    background: #1a3a5c;
-    color: rgba(255,255,255,0.85);
+    background: #2E7D32;
+    color: rgba(255,255,255,0.9);
     text-align: center;
     padding: 25px 20px;
     border-radius: 12px;
@@ -283,14 +299,13 @@ footer p {
 footer p:last-child {
     margin-bottom: 0;
     font-size: 0.85rem;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 /* ==========================================
    RESPONSIVIDADE
    ========================================== */
 
-/* Tablets e telas médias */
 @media (max-width: 900px) {
     main {
         padding: 25px 25px;
@@ -301,7 +316,6 @@ footer p:last-child {
     }
 }
 
-/* Celulares grandes */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -362,7 +376,6 @@ footer p:last-child {
     }
 }
 
-/* Celulares pequenos */
 @media (max-width: 480px) {
     body {
         padding: 5px;
@@ -445,26 +458,11 @@ footer p:last-child {
     }
 }
 
-/* ==========================================
-   UTILITÁRIOS (opcionais)
-   ========================================== */
-
-/* Destaque para avisos */
-.aviso-demo {
-    background: #fff3e0;
-    border: 2px dashed #e67e22;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px 0;
-    color: #7a4a1a;
-}
-
-/* Botão estilizado */
+/* UTILITÁRIOS */
 .btn {
     display: inline-block;
     padding: 10px 28px;
-    background: #1a3a5c;
+    background: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -475,12 +473,12 @@ footer p:last-child {
 }
 
 .btn:hover {
-    background: #2a5a7c;
+    background: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(26, 58, 92, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
 }
-
     </style>
+</head>
 
 
 </head>
