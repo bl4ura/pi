@@ -255,15 +255,17 @@
             flex: 1;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .sobre-img-right img {
             width: 100%;
             max-width: 480px;
-            height: 260px;
+            height: 300px;
             object-fit: cover;
             border-radius: 32px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            display: block;
         }
 
         /* 3 CARDS INFERIORES */
@@ -345,15 +347,16 @@
             font-weight: 600;
         }
 
-        /* ===== SEÇÃO FÍSICA (COM IMAGEM DE FUNDO NO BANNER E QUADRADOS LIMPOS) ===== */
+        /* ===== SEÇÃO FÍSICA ===== */
         .fisica-banner-container {
             display: flex;
-            background: linear-gradient(rgba(20, 45, 30, 0.78), rgba(20, 45, 30, 0.78)), url('FISICAPI.jpg');
+            background: linear-gradient(rgba(20, 45, 30, 0.45), rgba(20, 45, 30, 0.55)), url('FISICAPI.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 32px;
-            padding: 45px 35px;
-            gap: 30px;
+            padding: 80px 50px;
+            min-height: 480px;
+            gap: 40px;
             align-items: center;
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
             color: white;
@@ -364,11 +367,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-right: 15px;
+            background: rgba(20, 45, 30, 0.65);
+            padding: 30px;
+            border-radius: 24px;
+            backdrop-filter: blur(4px);
         }
 
         .fisica-destaque-left h2 {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 800;
@@ -376,9 +382,9 @@
 
         .fisica-destaque-left p {
             color: #E8F5E9;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .btn-fisica-acao {
@@ -400,23 +406,23 @@
         }
 
         .fisica-cards-right {
-            flex: 1.6;
+            flex: 1.5;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
         .card-produto-fisica {
-            background: rgba(250, 252, 248, 0.95);
+            background: rgba(250, 252, 248, 0.92);
             backdrop-filter: blur(8px);
             border-radius: 24px;
-            padding: 28px 22px;
+            padding: 30px 24px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: #2D4336;
             transition: transform 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         .card-produto-fisica:hover {
@@ -424,7 +430,7 @@
         }
 
         .card-produto-body h4 {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: #2E5B3E;
             font-weight: 700;
             margin-bottom: 12px;
@@ -666,7 +672,7 @@
             </div>
         </section>
 
-        <!-- FÍSICA (COM IMAGEM DE FUNDO NO BANNER E APENAS OS TEXTOS ORIGINAIS NOS CARDS) -->
+        <!-- FÍSICA -->
         <section id="fisica">
             <div class="fisica-banner-container">
                 <!-- Painel de Destaque na Esquerda -->
@@ -676,7 +682,7 @@
                     <a href="#solucao" class="btn-fisica-acao">Ver Solução</a>
                 </div>
 
-                <!-- 2 Cards com os Textos Originais (Sem imagens internas e sem botões de "Saiba mais") -->
+                <!-- 2 Cards com os Textos Originais -->
                 <div class="fisica-cards-right">
                     <!-- Card 1: Conteúdos Estudados -->
                     <div class="card-produto-fisica">
@@ -753,6 +759,15 @@
                         <li>Todos têm o mesmo acesso à energia?</li>
                         <li>A tecnologia também pode ajudar a reduzir o consumo?</li>
                     </ul>
+                </div>
+                <div class="caixa">
+                    <h3>Citações Motivacionais</h3>
+                    <i style="color: #07090a;">"Agrupa as tuas ações de tal maneira que os efeitos delas não sejam destrutivos para a possibilidade futura de uma autêntica vida humana sobre a Terra." (JONAS, Hans. O Princípio da Responsabilidade. 1979).</i>
+                    <hr> <br>
+                    <i style="color: #07090a;">"A tecnologia deve ser utilizada para melhorar a vida humana, não para destruí-la." (JONAS, Hans. O Princípio da Responsabilidade. 1979)</i>
+                    <hr><br>
+                    <i style="color: #07090a;">"Saber deixar as coisas no auge é a arte de retirar-se antes que as circunstâncias nos forcem." (GRÁCIAN, Bathazar. Oráculo manual e arte da prudênciada Responsabilidade. 1647)</i>
+                    <hr>
                 </div>
             </div>
         </section>
