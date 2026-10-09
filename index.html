@@ -200,7 +200,7 @@
             scroll-margin-top: 100px;
         }
 
-        /* ===== SEÇÃO SOBRE O PROJETO (ESTILO DA SUA IMAGEM) ===== */
+        /* ===== SEÇÃO SOBRE O PROJETO ===== */
         .sobre-titulo-principal {
             text-align: center;
             font-size: 2.3rem;
@@ -266,7 +266,7 @@
             max-width: 480px;
             height: 260px;
             object-fit: cover;
-            border-radius: 32px; /* Cantos bem arredondados como na imagem */
+            border-radius: 32px;
             box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
@@ -278,7 +278,7 @@
         }
 
         .card-suave {
-            background-color: #EBF3E8; /* Fundo suave */
+            background-color: #EBF3E8;
             border-radius: 28px;
             padding: 30px 25px;
             display: flex;
@@ -299,15 +299,21 @@
         }
 
         .card-icon-circle {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            border: 1.5 solid #2E5B3E;
+            border: 2px solid #2E5B3E;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
-            background: rgba(46, 91, 62, 0.08);
+            background: transparent;
+        }
+
+        .card-icon-inner {
+            width: 10px;
+            height: 10px;
+            background-color: #2E5B3E;
+            border-radius: 50%;
         }
 
         .card-suave h4 {
@@ -485,7 +491,7 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- SOBRE O PROJETO (ESTRUTURA IDENTICA À SUA IMAGEM) -->
+        <!-- SOBRE O PROJETO -->
         <section>
             <h2 class="sobre-titulo-principal">Sobre o Projeto</h2>
 
@@ -494,7 +500,7 @@
                 <div class="sobre-texto-left">
                     <h3>O Problema</h3>
                     <p>O consumo excessivo e o desperdício no uso cotidiano de aparelhos eletrônicos aumentam significativamente os custos das famílias e geram impactos ambientais diretos na produção e distribuição de eletricidade.</p>
-                    <a href="#solucao" class="btn-sobre">Conhecer Solução ►</a>
+                    <a href="#solucao" class="btn-sobre">Conhecer Solução &rarr;</a>
                 </div>
 
                 <div class="sobre-img-right">
@@ -502,38 +508,44 @@
                 </div>
             </div>
 
-            <!-- 3 Cards Inferiores -->
+            <!-- 3 Cards Inferiores sem Emojis -->
             <div class="sobre-cards-grid">
                 <!-- Card 1: Tema -->
                 <div class="card-suave">
                     <div class="card-top">
-                        <div class="card-icon-circle">⚡</div>
+                        <div class="card-icon-circle">
+                            <div class="card-icon-inner"></div>
+                        </div>
                         <h4>Tema</h4>
                         <p>Consumo de Energia Elétrica e seus Impactos Sociais e Ambientais na Comunidade.</p>
                     </div>
                     <div class="card-bottom-line">
                         <span>Saiba mais</span>
-                        <span>▼</span>
+                        <span>&darr;</span>
                     </div>
                 </div>
 
                 <!-- Card 2: Objetivo -->
                 <div class="card-suave">
                     <div class="card-top">
-                        <div class="card-icon-circle">🎯</div>
+                        <div class="card-icon-circle">
+                            <div class="card-icon-inner"></div>
+                        </div>
                         <h4>Objetivo</h4>
                         <p>Investigar os hábitos de consumo na comunidade integrando Física, Geografia, Filosofia e Programação Web para conscientizar sobre o uso eficiente.</p>
                     </div>
                     <div class="card-bottom-line">
                         <span>Ver detalhes</span>
-                        <span>▼</span>
+                        <span>&darr;</span>
                     </div>
                 </div>
 
                 <!-- Card 3: Integrantes -->
                 <div class="card-suave">
                     <div class="card-top">
-                        <div class="card-icon-circle">👥</div>
+                        <div class="card-icon-circle">
+                            <div class="card-icon-inner"></div>
+                        </div>
                         <h4>Integrantes</h4>
                         <ul>
                             <li>• Annajulya de Sousa Alvarenga</li>
@@ -544,7 +556,7 @@
                     </div>
                     <div class="card-bottom-line">
                         <span>2º Ano Informática</span>
-                        <span>▼</span>
+                        <span>&darr;</span>
                     </div>
                 </div>
             </div>
