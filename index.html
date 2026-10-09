@@ -349,7 +349,7 @@
             font-weight: 600;
         }
 
-        /* ===== NOVO ESTILO DA SEÇÃO FÍSICA (LAYOUT BANNER DA SUA IMAGEM) ===== */
+        /* ===== SEÇÃO FÍSICA (COM TEXTOS ORIGINAIS INTEGRADOS) ===== */
         .fisica-banner-container {
             display: flex;
             background: linear-gradient(135deg, #1D3B2A, #2E5B3E);
@@ -411,7 +411,7 @@
         .card-produto-fisica {
             background: #F9FAF8;
             border-radius: 22px;
-            padding: 15px;
+            padding: 20px 18px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -428,21 +428,32 @@
             height: 130px;
             object-fit: cover;
             border-radius: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .card-produto-body h4 {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #2E5B3E;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .card-produto-body p {
+            font-size: 0.9rem;
+            color: #556B5C;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .card-produto-body ul {
+            list-style-type: disc;
+            padding-left: 18px;
             font-size: 0.88rem;
             color: #556B5C;
-            line-height: 1.4;
-            margin-bottom: 12px;
+        }
+
+        .card-produto-body ul li {
+            margin-bottom: 4px;
         }
 
         .btn-card-pequeno {
@@ -457,6 +468,7 @@
             font-size: 0.85rem;
             font-weight: 700;
             transition: background 0.3s ease;
+            margin-top: 15px;
         }
 
         .btn-card-pequeno:hover {
@@ -679,52 +691,50 @@
             </div>
         </section>
 
-        <!-- FÍSICA (ESTILO BANNER DA IMAGEM) -->
+        <!-- FÍSICA (COM OS SEUS TEXTOS ORIGINAIS EXATOS) -->
         <section id="fisica">
             <div class="fisica-banner-container">
                 <!-- Painel de Destaque na Esquerda -->
                 <div class="fisica-destaque-left">
                     <h2>Física</h2>
-                    <p>Compreenda os conceitos fundamentais sobre grandezas elétricas, potência e consumo de energia no cotidiano.</p>
-                    <a href="#solucao" class="btn-fisica-acao">Analisar Cálculos</a>
+                    <p>Análise técnica do consumo de energia a partir das grandezas elétricas e do funcionamento dos equipamentos.</p>
+                    <a href="#solucao" class="btn-fisica-acao">Ver Cálculos</a>
                 </div>
 
-                <!-- 3 Cards Verticais de Exibição na Direita -->
+                <!-- 3 Cards com o Teu Conteúdo Original -->
                 <div class="fisica-cards-right">
-                    <!-- Card 1 -->
+                    <!-- Card 1: Conteúdos Estudados -->
                     <div class="card-produto-fisica">
-                        <div>
-                            <img src="FISICAPI.jpg" alt="Grandezas Elétricas" class="card-produto-img">
-                            <div class="card-produto-body">
-                                <h4>Grandezas Elétricas</h4>
-                                <p>Tensão, corrente e potência elétrica aplicadas aos aparelhos.</p>
-                            </div>
+                        <div class="card-produto-body">
+                            <h4>Conteúdos Estudados</h4>
+                            <ul>
+                                <li>Energia e Potência Elétrica</li>
+                                <li>Tensão e Corrente Elétrica</li>
+                                <li>Cálculo de Consumo de Aparelhos</li>
+                                <li>Eficiência Energética</li>
+                            </ul>
                         </div>
-                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                        <a href="#solucao" class="btn-card-pequeno">Saiba Mais</a>
                     </div>
 
-                    <!-- Card 2 -->
+                    <!-- Card 2: Relação com o Projeto -->
                     <div class="card-produto-fisica">
-                        <div>
-                            <img src="FISICAPI.jpg" alt="Cálculo de Consumo" class="card-produto-img">
-                            <div class="card-produto-body">
-                                <h4>Cálculo de Consumo</h4>
-                                <p>Estimativa de consumo em kWh a partir do tempo de uso.</p>
-                            </div>
+                        <div class="card-produto-body">
+                            <h4>Relação com o Projeto</h4>
+                            <p>A Física permite calcular a energia consumida a partir da potência e do tempo de uso, possibilitando estimar como mudanças de hábitos reduzem o desperdício.</p>
                         </div>
-                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                        <a href="#solucao" class="btn-card-pequeno">Saiba Mais</a>
                     </div>
 
-                    <!-- Card 3 -->
+                    <!-- Card 3: Imagem ou gráfico -->
                     <div class="card-produto-fisica">
                         <div>
-                            <img src="FISICAPI.jpg" alt="Eficiência Energética" class="card-produto-img">
                             <div class="card-produto-body">
-                                <h4>Eficiência Energética</h4>
-                                <p>Como otimizar o uso e diminuir o desperdício.</p>
+                                <h4>Imagem ou gráfico</h4>
                             </div>
+                            <img src="FISICAPI.jpg" alt="Gráfico de Física" class="card-produto-img">
                         </div>
-                        <a href="#solucao" class="btn-card-pequeno">Ver Mais</a>
+                        <a href="#solucao" class="btn-card-pequeno">Ver Gráfico</a>
                     </div>
                 </div>
             </div>
