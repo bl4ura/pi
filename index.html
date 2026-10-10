@@ -1,3 +1,8 @@
+Perfeito! Ajustei a seção de Referências para seguir exatamente o layout em colunas centralizadas com ícones discretos no topo (estilo o modelo da imagem), aplicando um fundo tom laranja suave e elegante que harmoniza com os detalhes do site.
+
+Aqui está o código completo e atualizado:
+
+HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -676,7 +681,7 @@
         }
 
         /* ==========================================
-           SEÇÃO SOLUÇÃO (EFEITO MASSA: GLOW, HOVER ELEVADO & GRADIENTE SUAVE)
+           SEÇÃO SOLUÇÃO
            ========================================== */
         .solucao-journal-grid {
             display: grid;
@@ -700,7 +705,6 @@
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* Efeito de brilho interno dinâmico ao passar o mouse */
         .solucao-card-retrato::before {
             content: '';
             position: absolute;
@@ -754,6 +758,50 @@
             transform: translateX(6px);
         }
 
+        /* ==========================================
+           SEÇÃO REFERÊNCIAS (ESTILO DA FOTO COM BANDA LARANJA)
+           ========================================== */
+        .referencias-banner-container {
+            background-color: #FFE6CC; /* Fundo laranja suave / quente que combina com o tema */
+            border-radius: 28px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(232, 158, 58, 0.15);
+            border: 1px solid rgba(232, 158, 58, 0.25);
+        }
+
+        .referencias-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            text-align: center;
+        }
+
+        .referencia-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .referencia-icon {
+            font-size: 2rem;
+            margin-bottom: 14px;
+            opacity: 0.85;
+            color: #D97706;
+        }
+
+        .referencia-item h3 {
+            font-size: 1.25rem;
+            color: #8C4A00;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .referencia-item p {
+            color: #5C3A14;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
         /* ===== DEMAIS SEÇÕES ===== */
         section h2 {
             font-size: 2rem;
@@ -778,46 +826,6 @@
             font-size: 1.05rem;
             margin-bottom: 30px;
             max-width: 800px;
-        }
-
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .caixa {
-            background: #F8FAF7;
-            border-radius: 16px;
-            padding: 25px;
-            border-left: 5px solid #2E5B3E;
-            transition: all 0.3s ease;
-        }
-
-        .caixa:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-            background: #FFFFFF;
-        }
-
-        .caixa h3 {
-            color: #2E5B3E;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .caixa p, .caixa ul {
-            color: #4A6354;
-            font-size: 0.95rem;
-        }
-
-        .caixa ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .caixa ul li {
-            margin-bottom: 6px;
         }
 
         /* RODAPÉ */
@@ -927,7 +935,6 @@
                 padding: 22px 18px;
             }
 
-            /* Solução Journal em Celular */
             .solucao-journal-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -936,6 +943,16 @@
             .solucao-card-retrato {
                 min-height: auto;
                 padding: 28px 22px;
+            }
+
+            /* Referências em Celular */
+            .referencias-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .referencias-banner-container {
+                padding: 35px 20px;
             }
 
             section h2::after {
@@ -1180,7 +1197,7 @@
             </div>
         </section>
 
-        <!-- SOLUÇÃO (ESTILO JOURNAL EDITORIAL COM EFEITO MASSA DE HOVER, GRADIENTE E BRILHO) -->
+        <!-- SOLUÇÃO -->
         <section id="solucao">
             <h2>Possível Solução</h2>
             <p>Conheça a nossa proposta de intervenção tecnológica e educativa para a comunidade.</p>
@@ -1221,18 +1238,43 @@
             </div>
         </section>
 
-        <!-- REFERÊNCIAS -->
+        <!-- REFERÊNCIAS (LAYOUT BASEADO NA IMAGEM COM COR DE FUNDO LARANJA SUAVE) -->
         <section id="referencias">
             <h2>Referências</h2>
-            <div class="caixa">
-                <ul>
-                    <li>ARISTÓTELES. Ética a Nicômaco. Tradução de Mário da Gama Kury. Brasília: Editora Universidade de Brasília, 1985.</li>
-                    <li>GRACIÁN, Baltasar. A arte da prudência. São Paulo: Martin Claret, 2005.</li>
-                    <li>AUBENQUE, Pierre. A prudência em Aristóteles. Tradução de Marisa Lopes. São Paulo: Discurso Editorial, 2003.</li>
-                    <li>BIN, Adriano Sotero. A phronêsis na Ética a Nicômaco. 2018. Dissertação (Mestrado em Filosofia) — UnB, 2018.</li>
-                    <li>EMPRESA DE PESQUISA ENERGÉTICA (EPE). Balanço Energético Nacional 2026: relatório síntese — ano base 2025. Rio de Janeiro: EPE, 2026.</li>
-                    <li>EMPRESA DE PESQUISA ENERGÉTICA (EPE). Consumo mensal de energia elétrica por classe (regiões e subsistemas). Rio de Janeiro: EPE, 2026.</li>
-                </ul>
+            
+            <div class="referencias-banner-container">
+                <div class="referencias-grid">
+                    <!-- Coluna 1: Filosofia & Ética -->
+                    <div class="referencia-item">
+                        <div class="referencia-icon">📖</div>
+                        <h3>Filosofia & Ética</h3>
+                        <p>
+                            <strong>ARISTÓTELES.</strong> <em>Ética a Nicômaco.</em> Tradução de Mário da Gama Kury. UnB, 1985.<br><br>
+                            <strong>AUBENQUE, Pierre.</strong> <em>A prudência em Aristóteles.</em> Discurso Editorial, 2003.<br><br>
+                            <strong>BIN, Adriano Sotero.</strong> <em>A phronêsis na Ética a Nicômaco.</em> Dissertação (Mestrado) — UnB, 2018.
+                        </p>
+                    </div>
+
+                    <!-- Coluna 2: Prudência & Prática -->
+                    <div class="referencia-item">
+                        <div class="referencia-icon">🏛️</div>
+                        <h3>Prudência & Prática</h3>
+                        <p>
+                            <strong>GRACIÁN, Baltasar.</strong> <em>A arte da prudência.</em> São Paulo: Martin Claret, 2005.<br><br>
+                            <strong>JONAS, Hans.</strong> <em>O Princípio Responsabilidade:</em> Ensaio de uma ética para a civilização tecnológica. 1979.
+                        </p>
+                    </div>
+
+                    <!-- Coluna 3: Energia & Dados -->
+                    <div class="referencia-item">
+                        <div class="referencia-icon">⚡</div>
+                        <h3>Energia & Dados</h3>
+                        <p>
+                            <strong>EPE.</strong> <em>Balanço Energético Nacional 2026:</em> relatório síntese — ano base 2025. Rio de Janeiro: EPE, 2026.<br><br>
+                            <strong>EPE.</strong> <em>Consumo mensal de energia elétrica por classe.</em> Rio de Janeiro: EPE, 2026.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
