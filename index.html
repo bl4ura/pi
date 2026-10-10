@@ -1,10 +1,18 @@
+Para aplicar esse estilo de fonte com serifa elegante, sofisticada e com aquela pegada editorial clássica (semelhante a fontes como Playfair Display, Cormorant Garamond ou Georgia com um toque refinado), eu configurei a importação da fonte 'Playfair Display' do Google Fonts diretamente no código.
 
+Ela foi aplicada no título principal da página (.hero h1), nos títulos das seções ("Sobre o Projeto", "Física", "Geografia", "Filosofia", "Possível Solução" e "Referências") e nos títulos internos dos cartões e caixas.
+
+Aqui está o código completo e atualizado com a nova fonte e todos os seus pedidos anteriores mantidos:
+
+HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador - Consumo de Energia Elétrica</title>
+    <!-- Importando a fonte elegante com serifa (Playfair Display) estilo Editorial -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <style>
         /* ==========================================
            ESTILOS GERAIS & PALETA
@@ -113,10 +121,11 @@
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            line-height: 1.2;
+            font-family: 'Playfair Display', serif; /* Fonte com serifa aplicada */
+            font-size: 3rem;
+            line-height: 1.15;
             color: #2E5B3E;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
@@ -198,12 +207,28 @@
             scroll-margin-top: 100px;
         }
 
+        /* TIPOGRAFIA EDITORIAL PARA TODOS OS TÍTULOS SOLICITADOS */
+        .sobre-titulo-principal,
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #2E5B3E;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .fisica-destaque-left h2,
+        .geografia-destaque-left h2,
+        .filosofia-destaque-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
         /* ===== SEÇÃO SOBRE O PROJETO ===== */
         .sobre-titulo-principal {
             text-align: center;
-            font-size: 2.3rem;
-            color: #2E5B3E;
-            font-weight: 800;
             margin-bottom: 45px;
         }
 
@@ -221,7 +246,8 @@
         }
 
         .sobre-texto-left h3 {
-            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             color: #2E5B3E;
             margin-bottom: 12px;
             font-weight: 700;
@@ -317,7 +343,8 @@
         }
 
         .card-suave h4 {
-            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             color: #2E5B3E;
             font-weight: 700;
         }
@@ -375,13 +402,6 @@
             backdrop-filter: blur(4px);
         }
 
-        .fisica-destaque-left h2 {
-            font-size: 2.5rem;
-            color: #FFFFFF;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
         .fisica-destaque-left p {
             color: #E8F5E9;
             font-size: 1.1rem;
@@ -432,7 +452,8 @@
         }
 
         .card-produto-body h4 {
-            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             color: #2E5B3E;
             font-weight: 700;
             margin-bottom: 12px;
@@ -482,13 +503,6 @@
             padding: 30px;
             border-radius: 24px;
             backdrop-filter: blur(4px);
-        }
-
-        .geografia-destaque-left h2 {
-            font-size: 2.5rem;
-            color: #FFFFFF;
-            margin-bottom: 15px;
-            font-weight: 800;
         }
 
         .geografia-destaque-left p {
@@ -541,7 +555,8 @@
         }
 
         .card-produto-geografia .card-produto-body h4 {
-            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             color: #1B4D3E;
             font-weight: 700;
             margin-bottom: 12px;
@@ -570,7 +585,7 @@
         /* ===== SEÇÃO FILOSOFIA ===== */
         .filosofia-banner-container {
             display: flex;
-            background: linear-gradient(rgba(50, 35, 20, 0.72), rgba(65, 45, 25, 0.82)), url('proj3.jpg');
+            background: linear-gradient(rgba(50, 35, 20, 0.72), rgba(65, 45, 25, 0.82)), url('filosofiapi.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 32px;
@@ -591,13 +606,6 @@
             padding: 30px;
             border-radius: 24px;
             backdrop-filter: blur(4px);
-        }
-
-        .filosofia-destaque-left h2 {
-            font-size: 2.5rem;
-            color: #FFFFFF;
-            margin-bottom: 15px;
-            font-weight: 800;
         }
 
         .filosofia-destaque-left p {
@@ -651,7 +659,8 @@
         }
 
         .card-produto-filosofia .card-produto-body h4 {
-            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
             color: #8C5313;
             font-weight: 700;
             margin-bottom: 8px;
@@ -724,11 +733,12 @@
         }
 
         .solucao-card-content h3 {
-            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             color: #1A3825;
             margin-bottom: 18px;
-            font-weight: 800;
-            letter-spacing: -0.4px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         .solucao-card-content p {
@@ -755,10 +765,10 @@
         }
 
         /* ==========================================
-           SEÇÃO REFERÊNCIAS (COM O TEXTO ORIGINAL EM LISTA E FUNDO LARANJA)
+           SEÇÃO REFERÊNCIAS
            ========================================== */
         .referencias-box {
-            background-color: #FFE5CC; /* Cor de fundo laranja suave */
+            background-color: #FFE5CC;
             border-radius: 28px;
             padding: 40px;
             border: 1px solid rgba(232, 158, 58, 0.3);
@@ -777,25 +787,7 @@
             line-height: 1.6;
         }
 
-        /* ===== DEMAIS SEÇÕES ===== */
-        section h2 {
-            font-size: 2rem;
-            color: #2E5B3E;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        section h2::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 4px;
-            background: #FF9800;
-            border-radius: 2px;
-            margin-top: 6px;
-        }
-
+        /* ===== DEMAIS ELEMENTOS ===== */
         section > p {
             color: #556B5C;
             font-size: 1.05rem;
@@ -803,10 +795,14 @@
             max-width: 800px;
         }
 
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+        section h2::after {
+            content: '';
+            display: block;
+            width: 40%;
+            height: 4px;
+            background: #FF9800;
+            border-radius: 2px;
+            margin-top: 8px;
         }
 
         /* RODAPÉ */
@@ -847,7 +843,7 @@
             }
 
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 2.2rem;
             }
 
             .hero-actions {
@@ -893,7 +889,7 @@
             .fisica-destaque-left h2,
             .geografia-destaque-left h2,
             .filosofia-destaque-left h2 {
-                font-size: 2rem;
+                font-size: 2.1rem;
             }
 
             .btn-fisica-acao,
@@ -965,7 +961,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="projetoint2.jpg" alt="Ilustração do Consumo de Energia">
+            <img src="FISICAPI.jpg" alt="Ilustração do Consumo de Energia">
         </div>
     </section>
 
@@ -985,7 +981,7 @@
                 </div>
 
                 <div class="sobre-img-right">
-                    <img src="projeto1.webp" alt="Mau uso da energia e impacto no meio ambiente">
+                    <img src="geopi.jpg" alt="Mau uso da energia e impacto no meio ambiente">
                 </div>
             </div>
 
@@ -1213,7 +1209,7 @@
             </div>
         </section>
 
-        <!-- REFERÊNCIAS (COM FORMATO DE TEXTO ORIGINAL E FUNDO LARANJA) -->
+        <!-- REFERÊNCIAS -->
         <section id="referencias">
             <h2>Referências</h2>
             
