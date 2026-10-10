@@ -676,7 +676,7 @@
         }
 
         /* ==========================================
-           SEÇÃO SOLUÇÃO (ESTILO JOURNAL EDITORIAL EM RETRATO)
+           SEÇÃO SOLUÇÃO (EFEITO MASSA: GLOW, HOVER ELEVADO & GRADIENTE SUAVE)
            ========================================== */
         .solucao-journal-grid {
             display: grid;
@@ -686,49 +686,72 @@
         }
 
         .solucao-card-retrato {
-            background-color: #F4F7F2; /* Fundo clarinho suave estilo Editorial */
-            border-radius: 20px;
-            padding: 35px 28px;
+            background: linear-gradient(135deg, #E6EFE1 0%, #D2E7C4 100%);
+            border-radius: 28px;
+            padding: 40px 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 400px; /* Formato retrato vertical elegante */
-            border: 1px solid rgba(46, 91, 62, 0.08);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.4s ease;
+            min-height: 440px;
+            border: 2px solid rgba(46, 91, 62, 0.18);
+            box-shadow: 0 12px 30px rgba(46, 91, 62, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Efeito de brilho interno dinâmico ao passar o mouse */
+        .solucao-card-retrato::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.6s ease;
+        }
+
+        .solucao-card-retrato:hover::before {
+            left: 100%;
         }
 
         .solucao-card-retrato:hover {
-            transform: translateY(-8px);
-            background-color: #FFFFFF;
-            box-shadow: 0 16px 36px rgba(46, 91, 62, 0.1);
-            border-color: rgba(46, 91, 62, 0.2);
+            transform: translateY(-12px) scale(1.02);
+            background: linear-gradient(135deg, #EEF5EA 0%, #DCF0CD 100%);
+            box-shadow: 0 25px 50px rgba(46, 91, 62, 0.22), 0 0 20px rgba(76, 175, 80, 0.2);
+            border-color: #2E5B3E;
         }
 
         .solucao-card-content h3 {
-            font-size: 1.35rem;
-            color: #2E5B3E;
-            margin-bottom: 16px;
-            font-weight: 700;
-            letter-spacing: -0.3px;
+            font-size: 1.4rem;
+            color: #1A3825;
+            margin-bottom: 18px;
+            font-weight: 800;
+            letter-spacing: -0.4px;
         }
 
         .solucao-card-content p {
-            color: #556B5C;
-            font-size: 0.98rem;
-            line-height: 1.7;
+            color: #334A3C;
+            font-size: 1rem;
+            line-height: 1.75;
         }
 
         .solucao-card-footer {
             margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(46, 91, 62, 0.12);
-            font-size: 0.9rem;
+            padding-top: 18px;
+            border-top: 1px solid rgba(46, 91, 62, 0.25);
+            font-size: 0.92rem;
             font-weight: 700;
             color: #2E5B3E;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .solucao-card-retrato:hover .solucao-card-footer {
+            transform: translateX(6px);
         }
 
         /* ===== DEMAIS SEÇÕES ===== */
@@ -1136,7 +1159,7 @@
                         </div>
                     </div>
 
-                    <!-- Cartão 4 (Citações Completas e Organizadas) -->
+                    <!-- Cartão 4 -->
                     <div class="card-produto-filosofia">
                         <div class="card-produto-body">
                             <h4>Citações Motivacionais</h4>
@@ -1157,7 +1180,7 @@
             </div>
         </section>
 
-        <!-- SOLUÇÃO (ESTILO JOURNAL EDITORIAL EM FORMATO RETRATO COM FUNDO CLARINHO) -->
+        <!-- SOLUÇÃO (ESTILO JOURNAL EDITORIAL COM EFEITO MASSA DE HOVER, GRADIENTE E BRILHO) -->
         <section id="solucao">
             <h2>Possível Solução</h2>
             <p>Conheça a nossa proposta de intervenção tecnológica e educativa para a comunidade.</p>
