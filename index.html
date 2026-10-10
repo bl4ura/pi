@@ -566,21 +566,19 @@
             margin-bottom: 6px;
         }
 
-        /* ===== SEÇÃO FILOSOFIA (ESTILO BANNER COM IMAGEM DE FUNDO PRÓPRIA) ===== */
+        /* ===== SEÇÃO FILOSOFIA (BANNER AMPLIADO COM 4 CARTÕES INTEGRADOS NA GRADE) ===== */
         .filosofia-banner-container {
             display: flex;
-            /* Fundo com tom filosófico/terroso elegante combinado com a tua imagem de filosofia */
-            background: linear-gradient(rgba(50, 35, 20, 0.72), rgba(65, 45, 25, 0.82)), url('proj3.jpg');
+            background: linear-gradient(rgba(50, 35, 20, 0.72), rgba(65, 45, 25, 0.82)), url('filosofiapi.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 32px;
             padding: 70px 45px;
-            min-height: 440px;
+            min-height: 520px;
             gap: 40px;
             align-items: center;
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
             color: white;
-            margin-bottom: 30px;
         }
 
         .filosofia-destaque-left {
@@ -626,18 +624,20 @@
             transform: translateY(-2px);
         }
 
+        /* Grade expandida para 4 cartões (2 colunas x 2 linhas) dentro do banner de Filosofia */
         .filosofia-cards-right {
-            flex: 1.5;
+            flex: 1.8;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
             gap: 20px;
         }
 
         .card-produto-filosofia {
-            background: rgba(250, 252, 248, 0.94);
+            background: rgba(250, 252, 248, 0.95);
             backdrop-filter: blur(8px);
             border-radius: 24px;
-            padding: 25px 20px;
+            padding: 24px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -651,7 +651,7 @@
         }
 
         .card-produto-filosofia .card-produto-body h4 {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #8C5313;
             font-weight: 700;
             margin-bottom: 10px;
@@ -662,14 +662,14 @@
 
         .card-produto-filosofia .card-produto-body p,
         .card-produto-filosofia .card-produto-body ul {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: #4A4033;
             line-height: 1.5;
         }
 
         .card-produto-filosofia .card-produto-body ul {
             list-style-type: disc;
-            padding-left: 18px;
+            padding-left: 16px;
         }
 
         .card-produto-filosofia .card-produto-body ul li {
@@ -1028,18 +1028,18 @@
             </div>
         </section>
 
-        <!-- FILOSOFIA (COM BANNER E IMAGEM DE FUNDO PRÓPRIA + OS 4 CARTÕES DE CONTEÚDO) -->
+        <!-- FILOSOFIA (COM GRADE DE 4 CARTÕES INTEGRADA DIRETAMENTE NO BANNER) -->
         <section id="filosofia">
             <div class="filosofia-banner-container">
-                <!-- Painel Esquerdo com Imagem de Fundo (substitua 'filosofiapi.jpg' pelo nome exato do arquivo que for adicionar) -->
                 <div class="filosofia-destaque-left">
                     <h2>Filosofia</h2>
                     <p>Reflexão crítica sobre ética, consumismo e responsabilidade ambiental.</p>
                     <a href="#solucao" class="btn-filosofia-acao">Ver Solução</a>
                 </div>
 
-                <!-- 2 Primeiros Cartões no Banner (Conteúdos e Reflexão) -->
+                <!-- Grade com os 4 cartões de conteúdo integrados no banner -->
                 <div class="filosofia-cards-right">
+                    <!-- Cartão 1 -->
                     <div class="card-produto-filosofia">
                         <div class="card-produto-body">
                             <h4>Conteúdos Estudados</h4>
@@ -1052,34 +1052,33 @@
                         </div>
                     </div>
 
+                    <!-- Cartão 2 -->
                     <div class="card-produto-filosofia">
                         <div class="card-produto-body">
                             <h4>Reflexão sobre o problema</h4>
-                            <p>A Filosofia permite questionar <b>como</b> e <b>por que</b> consumimos energia e quais responsabilidades temos diante dos impactos desse consumo, promovendo o consumo consciente.</p>
+                            <p>A Filosofia permite questionar <b>como</b> e <b>por que</b> consumimos energia e quais responsabilidades temos diante dos impactos desse consumo.</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Demais Cartões de Filosofia abaixo do Banner (Questões e Citações) -->
-            <div class="grid-cards" style="margin-top: 25px;">
-                <div class="caixa" style="border-left-color: #FF9800;">
-                    <h3>Questões Levantadas</h3>
-                    <ul>
-                        <li>É correto consumir energia sem considerar suas consequências?</li>
-                        <li>Quem é o responsável pelo desperdício: o indivíduo, as empresas ou o poder público?</li>
-                        <li>Todos têm o mesmo acesso à energia?</li>
-                        <li>A tecnologia também pode ajudar a reduzir o consumo?</li>
-                    </ul>
-                </div>
-                <div class="caixa" style="border-left-color: #FF9800;">
-                    <h3>Citações Motivacionais</h3>
-                    <i style="color: #07090a;">"Agrupa as tuas ações de tal maneira que os efeitos delas não sejam destrutivos para a possibilidade futura de uma autêntica vida humana sobre a Terra." (JONAS, Hans. O Princípio da Responsabilidade. 1979).</i>
-                    <hr> <br>
-                    <i style="color: #07090a;">"A tecnologia deve ser utilizada para melhorar a vida humana, não para destruí-la." (JONAS, Hans. O Princípio da Responsabilidade. 1979)</i>
-                    <hr><br>
-                    <i style="color: #07090a;">"Saber deixar as coisas no auge é a arte de retirar-se antes que as circunstâncias nos forcem." (GRÁCIAN, Bathazar. Oráculo manual e arte da prudênciada Responsabilidade. 1647)</i>
-                    <hr>
+                    <!-- Cartão 3 -->
+                    <div class="card-produto-filosofia">
+                        <div class="card-produto-body">
+                            <h4>Questões Levantadas</h4>
+                            <ul>
+                                <li>É correto consumir sem considerar consequências?</li>
+                                <li>Quem é responsável pelo desperdício?</li>
+                                <li>Todos têm o mesmo acesso à energia?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Cartão 4 -->
+                    <div class="card-produto-filosofia">
+                        <div class="card-produto-body">
+                            <h4>Citações</h4>
+                            <p style="font-size: 0.8rem; font-style: italic;">"Agrupa as tuas ações de tal maneira que os efeitos não sejam destrutivos..." (Hans Jonas)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
