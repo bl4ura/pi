@@ -1,16 +1,3 @@
-Agora sim, entendi perfeitamente! Observando a imagem de referência que enviaste:
-
-O container tem um fundo com cor sólida (aquele tom de verde/marrom esverdeado elegante).
-
-A imagem (geopi.jpg) fica posicionada à direita/por cima, parecendo um cartão ou painel com cantos bem arredondados que se sobrepõe ao fundo do bloco.
-
-Do lado esquerdo fica o texto da matéria (Título, descrição e botão).
-
-Compreendi exatamente a ideia de design. Além disso, mantive toda a responsividade refinada para telemóvel/celular para que o layout se adapte perfeitamente em telas pequenas (empilhando de forma limpa).
-
-Aqui está o código completo atualizado com a seção de Geografia exatamente nesse novo estilo que você pediu:
-
-HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -472,11 +459,11 @@ HTML
 
         /* ==========================================
            SEÇÃO GEOGRAFIA (ESTILO DA SUA REFERÊNCIA)
-           Fundo Sólido Elegante + Imagem em Destaque na Direita
+           Fundo Sólido Elegante + Imagem por Cima à Direita
            ========================================== */
         .geografia-banner-container {
             display: flex;
-            background: linear-gradient(135deg, #234E3B, #1B3E30); /* Fundo sólido verde-terra sofisticado */
+            background: linear-gradient(135deg, #234E3B, #1B3E30);
             border-radius: 36px;
             padding: 50px 50px 50px 60px;
             min-height: 480px;
@@ -497,7 +484,7 @@ HTML
         }
 
         .geografia-destaque-left h2 {
-            font-size: 3rem; /* Título grande e impactante igual ao "space" da imagem */
+            font-size: 3rem;
             color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 800;
@@ -532,7 +519,6 @@ HTML
             transform: translateY(-2px);
         }
 
-        /* Bloco da Imagem à Direita (com cantos bem arredondados por cima do fundo) */
         .geografia-image-right {
             flex: 1.2;
             display: flex;
@@ -702,7 +688,6 @@ HTML
                 grid-template-columns: 1fr;
             }
 
-            /* Banners responsivos para celular (Física e Geografia) */
             .fisica-banner-container,
             .geografia-banner-container {
                 flex-direction: column;
@@ -797,7 +782,7 @@ HTML
         </div>
 
         <div class="hero-image">
-            <img src="projetoint2.jpg" alt="Ilustração do Consumo de Energia">
+            <img src="FISICAPI.jpg" alt="Ilustração do Consumo de Energia">
         </div>
     </section>
 
@@ -817,7 +802,7 @@ HTML
                 </div>
 
                 <div class="sobre-img-right">
-                    <img src="projeto1.webp" alt="Mau uso da energia e impacto no meio ambiente">
+                    <img src="geopi.jpg" alt="Mau uso da energia e impacto no meio ambiente">
                 </div>
             </div>
 
@@ -911,7 +896,7 @@ HTML
             </div>
         </section>
 
-        <!-- GEOGRAFIA (ESTILO IDÊNTICO À SUA REFERÊNCIA: FUNDO SÓLIDO + IMAGEM EM DESTAQUE NA DIREITA) -->
+        <!-- GEOGRAFIA (ESTILO IDÊNTICO À SUA REFERÊNCIA: FUNDO SÓLIDO + IMAGEM POR CIMA À DIREITA) -->
         <section id="geografia">
             <div class="geografia-banner-container">
                 <!-- Título e Texto à Esquerda -->
@@ -921,7 +906,7 @@ HTML
                     <a href="#solucao" class="btn-geografia-acao">Ver Solução &rsaquo;</a>
                 </div>
 
-                <!-- Imagem em Destaque à Direita (com bordas arredondadas e sobreposta ao fundo) -->
+                <!-- Imagem em Destaque à Direita (por cima do fundo) -->
                 <div class="geografia-image-right">
                     <img src="geopi.jpg" alt="Mapa e Análise Geográfica">
                 </div>
