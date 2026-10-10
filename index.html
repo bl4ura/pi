@@ -1,3 +1,24 @@
+Entendi! O que deixou Geografia idêntico a Física foi o uso de caixas brancas simples por cima do fundo.
+
+Para a Geografia ter uma identidade própria, fiz as seguintes mudanças visuais marcantes:
+
+Tom de Cor de Geografia: Mudamos o fundo da esquerda para um Verde-Esmeralda / Folha (#1B4D3E e gradiente #0F382B), destacando o aspecto de meio ambiente/geografia socioespacial, diferente do verde escuro militar da Física.
+
+Estilo dos Cartões Internos: Em vez de caixas brancas comuns, os dois cartões da Geografia têm um fundo translúcido elegante (efeito vidro/vidro fosco) com borda verde acentuada e textos bem definidos, mostrando a imagem do mapa/geografia de fundo passando suavemente por trás deles.
+
+Botão Próprio: Botão de ação em tom verde-floresta dinâmico (#2E7D32).
+
+Otimização Celular/Mobile:
+
+O tamanho do banner diminui dinamicamente no telemóvel para não ocupar a tela inteira.
+
+Os cartões passam para 1 coluna vertical bem centralizada e com padding confortável para o polegar tocar/rolar.
+
+A imagem de fundo e as fontes se ajustam automaticamente para não cortar nada.
+
+Aqui está o código completo com essa Geografia reformulada:
+
+HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +42,7 @@
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: #EBF3E8; /* Verde bem claro suave */
+            background-color: #EBF3E8;
             color: #2D4336;
             line-height: 1.6;
         }
@@ -457,20 +478,21 @@
             margin-bottom: 6px;
         }
 
-        /* ===== SEÇÃO GEOGRAFIA (NOVO ESTILO BANNER COM DUPLO FUNDO COR + FOTO) ===== */
+        /* ===== SEÇÃO GEOGRAFIA (NOVO DESIGN EXCLUSIVO COM VIDRO FOSCO E COR ESMERALDA) ===== */
         .geografia-banner-container {
             display: flex;
-            /* Duplo fundo: 1 Cor temática (Verde Floresta/Terra) + 2 Foto (geopi.jpg) */
-            background: linear-gradient(135deg, rgba(34, 76, 56, 0.82), rgba(60, 110, 80, 0.75)), url('geopi.jpg');
+            /* Camada de Cor Verde-Esmeralda + Foto geopi.jpg por baixo */
+            background: linear-gradient(135deg, rgba(15, 56, 43, 0.85), rgba(27, 77, 62, 0.78)), url('geopi.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 32px;
-            padding: 70px 45px;
-            min-height: 440px;
-            gap: 40px;
+            padding: 60px 40px;
+            min-height: 420px;
+            gap: 35px;
             align-items: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 35px rgba(15, 56, 43, 0.2);
             color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .geografia-destaque-left {
@@ -478,11 +500,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: rgba(22, 54, 38, 0.7);
-            padding: 30px;
+            background: rgba(10, 40, 30, 0.75);
+            padding: 32px;
             border-radius: 24px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border-left: 5px solid #4CAF50;
         }
 
         .geografia-destaque-left h2 {
@@ -490,11 +512,12 @@
             color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 800;
+            letter-spacing: 0.5px;
         }
 
         .geografia-destaque-left p {
-            color: #E2F0D9;
-            font-size: 1.1rem;
+            color: #D1E8D5;
+            font-size: 1.08rem;
             line-height: 1.6;
             margin-bottom: 25px;
         }
@@ -502,7 +525,7 @@
         .btn-geografia-acao {
             display: inline-block;
             align-self: flex-start;
-            background: #4CAF50;
+            background: #2E7D32;
             color: #FFFFFF;
             padding: 12px 28px;
             border-radius: 25px;
@@ -510,11 +533,11 @@
             font-weight: 700;
             font-size: 0.95rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 14px rgba(46, 125, 50, 0.3);
         }
 
         .btn-geografia-acao:hover {
-            background: #3d8b40;
+            background: #388E3C;
             transform: translateY(-2px);
         }
 
@@ -525,31 +548,53 @@
             gap: 20px;
         }
 
+        /* Cartões estilo Vidro Fosco Escuro/Translúcido exclusivo de Geografia */
         .card-produto-geografia {
-            background: rgba(250, 252, 248, 0.94);
-            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 24px;
-            padding: 30px 24px;
+            padding: 28px 22px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: #2D4336;
-            transition: transform 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
 
         .card-produto-geografia:hover {
             transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(76, 175, 80, 0.6);
         }
 
         .card-produto-geografia .card-produto-body h4 {
-            font-size: 1.2rem;
-            color: #1E4620;
+            font-size: 1.25rem;
+            color: #A5D6A7;
             font-weight: 700;
             margin-bottom: 12px;
             border-bottom: 2px solid #4CAF50;
             padding-bottom: 6px;
             display: inline-block;
+        }
+
+        .card-produto-geografia .card-produto-body p {
+            font-size: 0.95rem;
+            color: #E8F5E9;
+            line-height: 1.6;
+        }
+
+        .card-produto-geografia .card-produto-body ul {
+            list-style-type: disc;
+            padding-left: 18px;
+            font-size: 0.92rem;
+            color: #E8F5E9;
+        }
+
+        .card-produto-geografia .card-produto-body ul li {
+            margin-bottom: 6px;
         }
 
         /* ===== DEMAIS SEÇÕES ===== */
@@ -636,9 +681,9 @@
         }
 
         /* ==========================================
-           RESPONSIVIDADE COMPLETA (CELULAR / MOBILE)
+           RESPONSIVIDADE COMPLETA PARA CELULAR / MOBILE
            ========================================== */
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
             header {
                 padding: 15px 5%;
                 flex-direction: column;
@@ -648,18 +693,27 @@
             nav {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 14px;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 0.88rem;
             }
 
             .hero {
                 flex-direction: column;
                 text-align: center;
-                padding: 30px 5% 40px 5%;
-                gap: 30px;
+                padding: 25px 4% 35px 4%;
+                gap: 25px;
+                min-height: auto;
             }
 
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 1.9rem;
+            }
+
+            .hero p {
+                font-size: 0.98rem;
             }
 
             .hero-actions {
@@ -667,60 +721,78 @@
             }
 
             main {
-                padding: 40px 5%;
-                border-radius: 28px 28px 0 0;
+                padding: 35px 4%;
+                border-radius: 24px 24px 0 0;
+            }
+
+            .sobre-titulo-principal {
+                font-size: 1.8rem;
             }
 
             .sobre-bloco-top {
                 flex-direction: column;
                 text-align: center;
-                gap: 25px;
+                gap: 20px;
             }
 
             .sobre-img-right img {
-                height: 220px;
+                height: 200px;
             }
 
             .sobre-cards-grid {
                 grid-template-columns: 1fr;
             }
 
-            /* Banner Física e Geografia adaptados para Celular */
+            /* Banners responsivos para celular (Física e Geografia) */
             .fisica-banner-container,
             .geografia-banner-container {
                 flex-direction: column;
-                padding: 30px 20px;
+                padding: 24px 16px;
                 min-height: auto;
                 text-align: center;
-                gap: 25px;
+                gap: 20px;
+                border-radius: 24px;
             }
 
             .fisica-destaque-left,
             .geografia-destaque-left {
-                padding: 20px;
+                padding: 20px 16px;
                 width: 100%;
+                border-radius: 18px;
             }
 
             .fisica-destaque-left h2,
             .geografia-destaque-left h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .fisica-destaque-left p,
+            .geografia-destaque-left p {
+                font-size: 0.95rem;
             }
 
             .btn-fisica-acao,
             .btn-geografia-acao {
                 align-self: center;
+                width: 100%;
+                max-width: 220px;
             }
 
             .fisica-cards-right,
             .geografia-cards-right {
                 grid-template-columns: 1fr;
                 width: 100%;
-                gap: 15px;
+                gap: 14px;
             }
 
             .card-produto-fisica,
             .card-produto-geografia {
-                padding: 22px 18px;
+                padding: 20px 16px;
+                border-radius: 18px;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
             }
 
             section h2::after {
@@ -872,7 +944,7 @@
             </div>
         </section>
 
-        <!-- GEOGRAFIA (ESTILO BANNER COM DUPLO FUNDO E ADAPTADO A DISPOSITIVOS MÓVEIS) -->
+        <!-- GEOGRAFIA (NOVO DESIGN EXCLUSIVO COM VIDRO FOSCO TRANSLÚCIDO E RESPONSIVO) -->
         <section id="geografia">
             <div class="geografia-banner-container">
                 <!-- Painel de Destaque na Esquerda -->
@@ -882,7 +954,7 @@
                     <a href="#solucao" class="btn-geografia-acao">Ver Solução</a>
                 </div>
 
-                <!-- 2 Cards com os Textos Originais de Geografia -->
+                <!-- 2 Cards no Estilo Vidro Fosco Translúcido -->
                 <div class="geografia-cards-right">
                     <!-- Card 1: Conteúdos Estudados -->
                     <div class="card-produto-geografia">
